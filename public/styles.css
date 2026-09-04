@@ -9,17 +9,32 @@
   --grey:#f6f9fc;
   --line:#dfe7ef;
   --shadow:0 22px 55px rgba(19,47,77,.11)
+
+  /* Step A: Global Typography & Text Smoothing */
+  --font-heading: 'Poppins', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+  --font-body: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif
 }
 *{box-sizing:border-box}
 
 html{
-  scroll-behavior:smooth
+  scroll-behavior:smooth;
+
+  /* Enables anti-aliasing for much crisper, clearer font rendering */
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  text-rendering: optimizeLegibility
 }
 
 body{
   margin:0;font-family:"DM Sans",sans-serif;
   color:var(--ink);
-  line-height:1.6
+  line-height:1.6;
+
+  /* Step B: Apply Inter to all body text */
+  font-family: var(--font-body);
+  color: #1a202c;
+  line-height: 1.6;
+  font-size: 1rem
 }
 
 a{
