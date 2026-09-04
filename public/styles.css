@@ -120,7 +120,130 @@ a{
   letter-spacing:.18em
 }
 
-.hero h1,.section h2,.cta h2{font-family:Manrope,sans-serif;line-height:1.08}.hero h1{font-size:clamp(42px,6vw,78px);margin:17px 0 22px}.hero p{max-width:650px;color:#e6f1fb;font-size:18px}.actions{display:flex;gap:12px;margin:30px 0}.btn{border:0;border-radius:7px;padding:14px 21px;font:700 14px "DM Sans";display:inline-flex;justify-content:center;align-items:center;cursor:pointer}.primary{background:var(--gold);color:#132130}.outline{border:1px solid rgba(255,255,255,.65);color:#fff;background:transparent}.white{background:#fff;color:var(--blue-dark)}.trust{display:flex;gap:22px;flex-wrap:wrap;font-size:13px}
+.hero h1,.section h2,.cta h2{
+  font-family:Manrope,sans-serif;
+  line-height:1.08
+}
+
+.hero h1{
+  font-size:clamp(42px,6vw,78px);
+  margin:17px 0 22px
+}
+.hero p{
+  max-width:650px;
+  color:#e6f1fb;
+  font-size:18px
+}
+
+/* Social Proof Section */
+.social-proof {
+  background-color: #f8f9fa;
+  padding: 60px 20px;
+  text-align: center;
+}
+
+.trust-header h2 {
+  font-size: 1.8rem;
+  color: #1a1a1a;
+  margin-bottom: 12px;
+  font-weight: 700;
+}
+
+* Trust Badge Pill */
+.trust-badge {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  background: #f5f5f7;
+  padding: 8px 18px;
+  border-radius: 30px;
+  font-size: 0.95rem;
+  font-weight: 500;
+  color: #333333;
+  margin-bottom: 40px;
+}
+
+/* SVG Icon alignment */
+.google-icon {
+  display: block;
+}
+
+.trust-badge {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  background: #ffffff;
+  padding: 10px 20px;
+  border-radius: 30px;
+  box-shadow: 0 2px 10px rgba(0,0,0,0.05);
+  font-size: 0.95rem;
+  font-weight: 600;
+  margin-bottom: 40px;
+}
+
+.trust-badge .rating {
+  color: #ffb400; /* Trustpilot Green */
+  font-weight: 800;
+}
+
+.trust-badge .star-icon {
+  color: #00b67a;
+}
+
+.trust-badge .trustpilot-brand {
+  color: #111;
+  margin-left: 5px;
+}
+
+/* Reviews Grid Layout */
+.reviews-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 20px;
+  max-width: 1100px;
+  margin: 0 auto;
+}
+
+.review-card {
+  background: #ffffff;
+  padding: 24px;
+  border-radius: 12px;
+  text-align: left;
+  border: 1px solid #e9ecef;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.03);
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+/* Gold Stars styling */
+.gold-stars {
+  color: #ffb400; /* Gold color matching Google ratings */
+  font-size: 1.1rem;
+  letter-spacing: 1px;
+}
+
+/* Review Cards Gold Stars Override */
+.review-card .stars {
+  color: #ffb400; /* Switched from green to gold */
+  letter-spacing: 2px;
+  margin-bottom: 12px;
+}
+
+.review-card .review-text {
+  color: #4a5568;
+  font-size: 0.95rem;
+  line-height: 1.5;
+  margin-bottom: 16px;
+}
+
+.review-card .reviewer-name {
+  font-weight: 600;
+  color: #1a202c;
+  font-size: 0.875rem;
+}
+
+.actions{display:flex;gap:12px;margin:30px 0}.btn{border:0;border-radius:7px;padding:14px 21px;font:700 14px "DM Sans";display:inline-flex;justify-content:center;align-items:center;cursor:pointer}.primary{background:var(--gold);color:#132130}.outline{border:1px solid rgba(255,255,255,.65);color:#fff;background:transparent}.white{background:#fff;color:var(--blue-dark)}.trust{display:flex;gap:22px;flex-wrap:wrap;font-size:13px}
 .service-ribbon{background:var(--blue);color:#fff}.ribbon-grid{display:grid;grid-template-columns:repeat(4,1fr)}.ribbon-grid>div{padding:23px 18px;border-right:1px solid rgba(255,255,255,.17)}.ribbon-grid>div:last-child{border:0}.ribbon-grid b,.ribbon-grid small{display:block}.ribbon-grid small{color:#dceeff;font-size:11px}
 .section{padding:105px 0}.grey{background:var(--grey)}.two{display:grid;grid-template-columns:1fr 1fr;gap:70px;align-items:center}.photo{min-height:525px;border-radius:16px;background-size:cover;background-position:center;box-shadow:var(--shadow)}.about-photo{background-image:url("https://images.unsplash.com/photo-1558618666-fcd25c85cd64?auto=format&fit=crop&w=1100&q=85")}.why-photo{background-image:url("https://images.unsplash.com/photo-1581092918056-0c4c3acd3789?auto=format&fit=crop&w=1100&q=85")}
 .section h2{font-size:clamp(34px,4vw,53px);margin:13px 0 18px}.section p{color:var(--muted);margin:0 0 15px}.check-list{margin-top:28px;border-top:1px solid var(--line)}.check-list div{display:flex;gap:18px;padding:16px 0;border-bottom:1px solid var(--line)}.check-list b{color:var(--blue)}
