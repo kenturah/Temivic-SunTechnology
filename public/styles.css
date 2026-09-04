@@ -231,6 +231,99 @@ a{
   justify-content: space-between;
 }
 
+.reviews-slider {
+  padding: 20px 10px 50px 10px;
+  max-width: 1100px;
+  margin: 0 auto;
+}
+
+.review-card {
+  height: auto;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.reviewer-meta {
+  display: flex;
+  flex-direction: column;
+  gap: 2px;
+  margin-top: 10px;
+}
+
+.reviewer-name {
+  font-weight: 700;
+  color: #1a202c;
+  font-size: 0.9rem;
+}
+
+.review-details {
+  font-size: 0.8rem;
+  color: #718096;
+}
+
+/* Swiper Controls Custom Styling
+.swiper-button-next, .swiper-button-prev {
+  color: #014488;
+}
+
+.swiper-pagination-bullet-active {
+  background-color: #014488;
+} */
+
+/* Base styling for white circular navigation buttons */
+.swiper-button-next,
+.swiper-button-prev {
+  background-color: #ffffff;
+  width: 42px;
+  height: 42px;
+  border-radius: 50%;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+  color: #014488;
+  
+  /* Hide buttons by default and prepare transition */
+  opacity: 0;
+  visibility: hidden;
+  transition: opacity 0.3s ease, visibility 0.3s ease, transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+/* Make arrow icon smaller */
+.swiper-button-next::after,
+.swiper-button-prev::after {
+  font-size: 16px;
+  font-weight: bold;
+}
+
+/* Show buttons when hovering over the reviews slider container */
+.reviews-slider:hover .swiper-button-next,
+.reviews-slider:hover .swiper-button-prev {
+  opacity: 1;
+  visibility: visible;
+}
+
+/* Hover effect on the buttons themselves */
+.swiper-button-next:hover,
+.swiper-button-prev:hover {
+  background-color: #f8fafc;
+  transform: scale(1.08);
+  box-shadow: 0 6px 16px rgba(0, 0, 0, 0.2);
+}
+
+/* Position arrows at the edges */
+.swiper-button-prev {
+  left: 5px;
+}
+
+.swiper-button-next {
+  right: 5px;
+}
+
+/* Section padding for slider clearance */
+.reviews-slider {
+  position: relative;
+  padding: 20px 25px 50px 25px;
+}
+
 /* Gold Stars styling */
 .gold-stars {
   color: #ffb400; /* Gold color matching Google ratings */
@@ -279,6 +372,39 @@ footer{background:#071a2b;color:#c7d5e3;padding:60px 0 0}.footer-grid{display:gr
   font-size:11px
 }
 
-.whatsapp{position:fixed;right:20px;bottom:20px;width:56px;height:56px;border-radius:50%;display:grid;place-items:center;background:#20b858;color:#fff;font-size:22px;box-shadow:0 12px 30px rgba(0,0,0,.22);z-index:20}
+/* .whatsapp{
+  position:fixed;
+  right:20px;bottom:20px;
+  width:56px;height:56px;
+  border-radius:50%;
+  display:grid;
+  place-items:center;
+  background:#20b858;
+  color:#fff;
+  font-size:22px;
+  box-shadow:0 12px 30px rgba(0,0,0,.22);z-index:20
+} */
+
+.whatsapp {
+  position: fixed;
+  bottom: 25px;
+  right: 25px;
+  width: 55px;
+  height: 55px;
+  background-color: #25d366;
+  color: #ffffff;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
+  z-index: 1000;
+  transition: transform 0.2s ease;
+}
+
+.whatsapp:hover {
+  transform: scale(1.08);
+}
+
 @media(max-width:900px){.nav-links{display:none;position:absolute;z-index:10;top:124px;left:4%;right:4%;background:#fff;padding:18px;border-radius:10px;box-shadow:var(--shadow);flex-direction:column;align-items:stretch}.nav-links.open{display:flex}.menu-btn{display:block}.ribbon-grid,.stats-grid{grid-template-columns:1fr 1fr}.cards{grid-template-columns:1fr 1fr}.two,.contact-grid{grid-template-columns:1fr;gap:40px}.projects{grid-template-columns:1fr}.footer-grid{grid-template-columns:1fr 1fr}.photo{min-height:390px}}
 @media(max-width:600px){.utility-inner{justify-content:center}.utility-inner>div{display:none}.logo-link img{width:175px}.hero,.hero-content{min-height:610px}.hero h1{font-size:44px}.actions{flex-direction:column}.trust{display:grid;gap:7px}.ribbon-grid,.stats-grid,.cards,.row,.footer-grid{grid-template-columns:1fr}.ribbon-grid>div,.stats-grid div{border-right:0;border-bottom:1px solid rgba(255,255,255,.13)}.section{padding:75px 0}.heading{display:block}.heading>p{margin-top:15px}.cta-inner{display:block}.cta .btn{margin-top:23px}.photo{min-height:300px}}

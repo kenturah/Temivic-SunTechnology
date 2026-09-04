@@ -17,3 +17,63 @@ form?.addEventListener("submit",async e=>{
     status.style.color="#9a6a12"; console.log(payload,err);
   }
 });
+
+// document.addEventListener('DOMContentLoaded', () => {
+//   const reviewsSwiper = new Swiper('.reviews-slider', {
+//     slidesPerView: 1,
+//     spaceBetween: 20,
+//     loop: true,
+//     autoplay: {
+//       delay: 4000,
+//       disableOnInteraction: false,
+//     },
+//     pagination: {
+//       el: '.swiper-pagination',
+//       clickable: true,
+//     },
+//     navigation: {
+//       nextEl: '.swiper-button-next',
+//       prevEl: '.swiper-button-prev',
+//     },
+//     breakpoints: {
+//       640: {
+//         slidesPerView: 2,
+//         spaceBetween: 20,
+//       },
+//       1024: {
+//         slidesPerView: 3,
+//         spaceBetween: 30,
+//       },
+//     },
+//   });
+// });
+
+document.addEventListener('DOMContentLoaded', () => {
+  const swiper = new Swiper('.reviews-slider', {
+    slidesPerView: 1,
+    spaceBetween: 20,
+    loop: true,
+    autoplay: {
+      delay: 3500,
+      disableOnInteraction: false,
+    },
+    pagination: {
+      el: '.swiper-pagination',
+      clickable: true,
+    },
+    navigation: {
+      nextEl: '.swiper-button-next',
+      prevEl: '.swiper-button-prev',
+    },
+    breakpoints: {
+      768: {
+        slidesPerView: 2,
+        spaceBetween: 20,
+      },
+      1024: {
+        slidesPerView: 3,
+        spaceBetween: 30,
+      },
+    },
+  });
+});
