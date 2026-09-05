@@ -35,4 +35,8 @@ app.post("/api/service-request",async(req,res)=>{
   }catch(error){console.error(error);res.status(500).json({message:"Unable to send request right now."});}
 });
 app.get("*",(req,res)=>res.sendFile(path.join(__dirname,"public","index.html")));
-app.listen(PORT,()=>console.log(`TemiVic website: http://localhost:${PORT}`));
+if (typeof(PhusionPassenger) !== 'undefined') {
+  app.listen('passenger');
+} else {
+  app.listen(PORT, () => console.log(`Server running on port ${PORT}`));
+}
