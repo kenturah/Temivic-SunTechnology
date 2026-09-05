@@ -38,5 +38,6 @@ app.get("*",(req,res)=>res.sendFile(path.join(__dirname,"public","index.html")))
 if (typeof(PhusionPassenger) !== 'undefined') {
   app.listen('passenger');
 } else {
-  app.listen(PORT, () => console.log(`Server running on port ${PORT}`));
+  // app.listen(PORT, () => console.log(`Server running on port ${PORT}`));
+  module.exports = app;
 }
