@@ -761,5 +761,14 @@ footer{background:#071a2b;color:#c7d5e3;padding:60px 0 0}.footer-grid{display:gr
   .about-hero h1 { font-size: 1.8rem; }
 }
 
+/* Mobile layout for Mission & Vision */
+@media (max-width: 768px) {
+  .mission-vision .grid-2-col {
+    display: flex;
+    flex-direction: column;
+    gap: 24px;
+  }
+}
+
 @media(max-width:900px){.nav-links{display:none;position:absolute;z-index:10;top:124px;left:4%;right:4%;background:#fff;padding:18px;border-radius:10px;box-shadow:var(--shadow);flex-direction:column;align-items:stretch}.nav-links.open{display:flex}.menu-btn{display:block}.ribbon-grid,.stats-grid{grid-template-columns:1fr 1fr}.cards{grid-template-columns:1fr 1fr}.two,.contact-grid{grid-template-columns:1fr;gap:40px}.projects{grid-template-columns:1fr}.footer-grid{grid-template-columns:1fr 1fr}.photo{min-height:390px}}
 @media(max-width:600px){.utility-inner{justify-content:center}.utility-inner>div{display:none}.logo-link img{width:175px}.hero,.hero-content{min-height:610px}.hero h1{font-size:44px}.actions{flex-direction:column}.trust{display:grid;gap:7px}.ribbon-grid,.stats-grid,.cards,.row,.footer-grid{grid-template-columns:1fr}.ribbon-grid>div,.stats-grid div{border-right:0;border-bottom:1px solid rgba(255,255,255,.13)}.section{padding:75px 0}.heading{display:block}.heading>p{margin-top:15px}.cta-inner{display:block}.cta .btn{margin-top:23px}.photo{min-height:300px}}
