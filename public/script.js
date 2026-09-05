@@ -77,3 +77,22 @@ document.addEventListener('DOMContentLoaded', () => {
     },
   });
 });
+
+document.addEventListener('DOMContentLoaded', () => {
+  // Existing reviews slider initialization...
+
+  // Initialize Client Services Background Sliders
+  new Swiper('.project-slider', {
+    effect: 'fade',
+    fadeEffect: {
+      crossFade: true // Prevents underlying slides from showing white/transparent background during transitions
+    },
+    loop: true,
+    autoplay: {
+      delay: 3000,
+      disableOnInteraction: false,
+      waitForTransition: false
+    },
+    speed: 1000,
+  });
+});
