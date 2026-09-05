@@ -1,11 +1,4 @@
-# ---
-# deployment:
-#   tasks:
-#     - export DEPLOYPATH=/home/dtffuvts/temivic-app
-#     - /bin/cp -R * $DEPLOYPATH
-#     - touch $DEPLOYPATH/tmp/restart.txt
-
-    ---
+---
 deployment:
   tasks:
     - export DEPLOYPATH=/home/dtffuvts/temivic-app
