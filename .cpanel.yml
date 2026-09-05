@@ -1,6 +1,17 @@
----
+# ---
+# deployment:
+#   tasks:
+#     - export DEPLOYPATH=/home/dtffuvts/temivic-app
+#     - /bin/cp -R * $DEPLOYPATH
+#     - touch $DEPLOYPATH/tmp/restart.txt
+
+    ---
 deployment:
   tasks:
     - export DEPLOYPATH=/home/dtffuvts/temivic-app
-    - /bin/cp -R * $DEPLOYPATH
+    - export NODEENV=/home/dtffuvts/nodeenv/temivic-app/18/bin
+    - mkdir -p $DEPLOYPATH/tmp $DEPLOYPATH/public
+    - /bin/cp -Rf * $DEPLOYPATH/
+    - chmod -R 755 $DEPLOYPATH
+    - cd $DEPLOYPATH && $NODEENV/npm install --only=production
     - touch $DEPLOYPATH/tmp/restart.txt
