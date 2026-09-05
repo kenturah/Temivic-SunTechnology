@@ -49,21 +49,9 @@ app.post("/api/service-request", async (req, res) => {
   }
 });
 
-// Catch-all route for frontend fallback
-const fs = require('fs');
-const path = require('path');
-
-// Serve static assets
-app.use(express.static(path.join(__dirname, 'public')));
-
-// Safe catch-all route
-app.get('*', (req, res) => {
-  const indexPath = path.join(__dirname, 'public', 'index.html');
-  if (fs.existsSync(indexPath)) {
-    res.sendFile(indexPath);
-  } else {
-    res.status(404).send('Application root index.html is missing inside /public directory.');
-  }
+// Catch-all route for SPA / index fallback
+app.get("*", (req, res) => {
+  res.sendFile(path.join(__dirname, "public", "index.html"));
 });
 
 // CloudLinux Passenger startup binding
@@ -73,3 +61,5 @@ if (typeof PhusionPassenger !== "undefined") {
   const PORT = process.env.PORT || 3000;
   app.listen(PORT, () => console.log(`Server running on port ${PORT}`));
 }
+
+module.exports = app;
