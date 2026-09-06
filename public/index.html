@@ -31,24 +31,25 @@
         Professional Installation • Maintenance • Repairs
       </span>
       <div>
-        <a href="tel:+2348060389857">+234 806 038 9857</a>
-        <a href="mailto:hello@temivicsuntechnology.com">hello@temivicsuntechnology.com</a>
+        <a href="tel:+2348060389857"><i class="fa-solid fa-phone"></i> +234 806 038 9857</a>
+        <a href="mailto:info@temivicsuntechnology.com"><i class="fa-solid fa-envelope"></i> info@temivicsuntechnology.com</a>
       </div>
     </div>
   </div>
 
   <nav class="nav container">
-    <a class="logo-link" href="#home">
+    <a class="logo-link" href="index.html">
       <img src="nav-bar logo.png" alt="TemiVic SunTechnology logo">
     </a>
 
     <button class="menu-btn" aria-label="Open navigation" aria-expanded="false">☰</button>
     <div class="nav-links">
-      <a href="#home">Home</a><a href="about.html">About</a><a href="#services">Services</a>
-      <a href="#projects">Projects</a><a href="#why">Why Us</a><a class="nav-button" href="#contact">Request Service</a>
+      <a href="index.html">Home</a><a href="about.html">About</a><a href="index.html">Services</a>
+      <a href="index.html">Projects</a><a href="why_us.html">Why Us</a><a class="nav-button" href="#contact">Request Service</a>
     </div>
   </nav>
 </header>
+
 
 <main>
 <section class="hero" id="home">
@@ -153,9 +154,25 @@
 
 <section class="section" id="about">
   <div class="container two">
-    <div class="photo about-photo">
+    
+    <!-- Image Slider Card -->
+    <div class="about-photo-card">
+      <div class="swiper aboutSwiper">
+        <div class="swiper-wrapper">
+          <div class="swiper-slide">
+            <img src="Images/IMG-20260905-WA0008.jpg" alt="TemiVic Installation Service">
+          </div>
+          <div class="swiper-slide">
+            <img src="Images/IMG-20260905-WA0011.jpg" alt="HVAC Maintenance">
+          </div>
+          <div class="swiper-slide">
+            <img src="Images/IMG-20260905-WA0006.jpg" alt="Electrical and Cooling Repair">
+          </div>
+        </div>
+      </div> <!-- <--- THIS WAS MISSING BEFORE -->
+    </div> <!-- Closes .about-photo-card -->
 
-    </div>
+    <!-- Text Block (Now safely outside the slider container) -->
     <div>
       <div class="eyebrow">ABOUT THE COMPANY</div>
       <h2>Technical service with a focus on comfort, safety and reliability.</h2>
@@ -164,28 +181,22 @@
       <div class="check-list">
         <div>
           <b>01</b>
-          <span>
-            Site assessment & professional installation
-          </span>
+          <span>Site assessment & professional installation</span>
         </div>
-
         <div>
           <b>02</b>
-          <span>
-            Maintenance, servicing & fault diagnosis
-          </span>
+          <span>Maintenance, servicing & fault diagnosis</span>
         </div>
-
         <div>
           <b>03</b>
-          <span>
-            Residential, commercial & facility projects
-          </span>
+          <span>Residential, commercial & facility projects</span>
         </div>
       </div>
     </div>
+
   </div>
 </section>
+
 
 <section class="section grey" id="services"><div class="container">
   <div class="heading"><div><div class="eyebrow">OUR SERVICES</div><h2>Complete technical services for your space.</h2></div><p>Focused services for cooling, climate control, refrigeration and electrical requirements.</p></div>
@@ -246,9 +257,9 @@
       <!-- Card 3: Facility -->
       <div class="project project-slider swiper">
         <div class="swiper-wrapper">
-          <div class="swiper-slide" style="background-image: url('https://images.unsplash.com/photo-1621905251918-48416bd8575a?auto=format&fit=crop&w=900&q=85');"></div>
-          <div class="swiper-slide" style="background-image: url('https://images.unsplash.com/photo-1621905252507-b35492cc74b4?auto=format&fit=crop&w=900&q=85');"></div>
-          <div class="swiper-slide" style="background-image: url('https://images.unsplash.com/photo-1581092335397-9583fe92d232?auto=format&fit=crop&w=900&q=85');"></div>
+          <div class="swiper-slide" style="background-image: url('Images/IMG-20260905-WA0016.jpg');"></div>
+          <div class="swiper-slide" style="background-image: url('Images/IMG-20260905-WA0009.jpg');"></div>
+          <div class="swiper-slide" style="background-image: url('Images/IMG-20260905-WA0003.jpg');"></div>
         </div>
         <div class="project-content">
           <span>FACILITY</span>
@@ -277,8 +288,8 @@
     <div class="contact-info">
       <a href="tel:+2348060389857"><span>☎</span><div><small>Call</small><b>+234 806 038 9857</b></div></a>
       <a href="https://wa.me/2348060389857" target="_blank" rel="noopener"><span>◉</span><div><small>WhatsApp</small><b>Chat with TemiVic</b></div></a>
-      <a href="mailto:hello@temivicsuntechnology.com"><span>✉</span><div><small>Email</small><b>hello@temivicsuntechnology.com</b></div></a>
-      </a><div><span>⌖</span><div><small>Service area</small><a href="http://maps.app.goo.gl/uRc3bh2zRNDLNpBW8"><b>7 Olakunle Ajibade St, LGA, Kosofe, Ojota/Ogudu 100242, Lagos </b></a></div></div>
+      <a href="mailto:info@temivicsuntechnology.com"><span>✉</span><div><small>Email</small><b>info@temivicsuntechnology.com</b></div></a>
+      <a href="http://maps.app.goo.gl/uRc3bh2zRNDLNpBW8"><span>⌖</span><div><small>Service area</small><b>7 Olakunle Ajibade St, Ojota/Ogudu 100242, Lagos</b></div></a>
     </div>
   </div>
   <form id="serviceForm" class="form">
@@ -310,20 +321,21 @@
 
     <div>
       <h4>Company</h4>
-      <a href="#about">About</a>
+      <a href="about.html">About</a>
       <a href="#projects">Projects</a>
-      <a href="#why">Why Us</a>
-      <a href="#contact">Contact</a>
+      <a href="why_us.html">Why Us</a>
+      <a href="contact.html">Contact</a>
     </div>
 
-    <div>
-      <h4>Contact</h4>
-      <a href="tel:+2348060389857">+234 806 038 9857</a>
-      <a href="mailto:hello@temivicsuntechnology.com">hello@temivicsuntechnology.com</a>
+   <div>
+        <h4>Contact</h4>
+        <a href="tel:+2348060389857"><i class="fa-solid fa-phone"></i> +234 806 038 9857</a>
+        <a href="mailto:info@temivicsuntechnology.com"><i class="fa-solid fa-envelope"></i> info@temivicsuntechnology.com</a>
 
-      <a a href="http://maps.app.goo.gl/uRc3bh2zRNDLNpBW8" target="_blank" rel="noopener noreferrer" class="footer-location">
-    7 Olakunle Ajibade St, LGA, Kosofe, Ojota/Ogudu 100242, Lagos
-  </a>
+        <a href="http://maps.app.goo.gl/uRc3bh2zRNDLNpBW8" target="_blank" rel="noopener noreferrer" class="footer-location">
+          <i class="fa-solid fa-location-dot"></i> 7 Olakunle Ajibade St, Kosofe, Ojota/Ogudu 100242, Lagos
+        </a>
+      </div>
     </div>
 
   </div>

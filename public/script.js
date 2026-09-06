@@ -96,3 +96,20 @@ document.addEventListener('DOMContentLoaded', () => {
     speed: 1000,
   });
 });
+
+// Initialize About Section Image Slider
+const aboutSwiper = new Swiper('.aboutSwiper', {
+  loop: true,
+  autoplay: {
+    delay: 3500,
+    disableOnInteraction: false,
+  },
+  effect: 'fade', // Use 'slide' if you prefer side-sliding over cross-fading
+  fadeEffect: {
+    crossFade: true
+  },
+  // pagination: {
+  //   el: '.swiper-pagination',
+  //   clickable: true,
+  // },
+});
