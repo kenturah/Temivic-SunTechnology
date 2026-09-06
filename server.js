@@ -29,23 +29,28 @@ app.post("/api/service-request", async (req, res) => {
   try {
     const transporter = nodemailer.createTransport({
       host: process.env.SMTP_HOST,
-      port: Number(process.env.SMTP_PORT || 587),
+      port: Number(process.env.SMTP_PORT || 465),
       secure: String(process.env.SMTP_SECURE) === "true",
       auth: { user: process.env.SMTP_USER, pass: process.env.SMTP_PASS }
     });
 
     await transporter.sendMail({
       from: process.env.SMTP_FROM || process.env.SMTP_USER,
-      to: process.env.COMPANY_EMAIL,
-      replyTo: email || undefined,
-      subject: `TemiVic service request — ${service}`,
-      text: `Name: ${name}\nPhone: ${phone}\nEmail: ${email || "Not supplied"}\nService: ${service}\n\nMessage:\n${message}`
+      to: process.env.COMPANY_EMAIL || process.env.SMTP_USER,
+      replyTo: email ? `"${name}" <${email}>` : undefined, // Sets customer email as Reply-To
+      subject: `New Service Request: ${service} - ${name}`,
+      text: `You received a new service request from your website:\n\n` +
+            `Name: ${name}\n` +
+            `Phone: ${phone}\n` +
+            `Email: ${email || "Not provided"}\n` +
+            `Service Requested: ${service}\n\n` +
+            `Message:\n${message}\n`
     });
 
-    return res.json({ message: "Service request sent successfully." });
+    return res.json({ message: "Thank you! Your request has been sent successfully." });
   } catch (error) {
     console.error("Nodemailer Error:", error);
-    return res.status(500).json({ message: "Unable to send request right now." });
+    return res.status(500).json({ message: "Unable to send request right now. Please try again later." });
   }
 });
 
